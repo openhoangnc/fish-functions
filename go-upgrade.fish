@@ -1,3 +1,4 @@
+# note: this function only works on macOS
 function go-upgrade
     set curVer (go version | grep -o -E 'go\d+\.\d+\.\d+')
     set arch (go version | grep -o -E '[^ ]+$' | sed 's/\//-/g') 
