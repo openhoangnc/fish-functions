@@ -1,1 +1,3 @@
-# fish-functions
+# Fish functions
+
+## Fishshell https://fishshell.com/
