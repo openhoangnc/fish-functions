@@ -1,6 +1,6 @@
 # note: this function only works on macOS
 function go-upgrade
-    set curVer (go version | grep -o -E 'go\d+\.\d+\.\d+')
+    set curVer (go version | grep -o -E 'go\d+\.\d+\(.\d+)?')
     set arch (go version | grep -o -E '[^ ]+$' | sed 's/\//-/g') 
     echo Current Go version: $curVer
     set pkgReg "go\\d+\\.\\d+(\\.\\d+)?\\.$arch\\.pkg"
