@@ -33,9 +33,9 @@ function go-upgrade
         end
 
         echo Download $latestPkg
-        curl https://dl.google.com/go/$latestPkg -o $latestPkg
+        curl https://dl.google.com/go/$latestPkg -o /tmp/$latestPkg
         echo Next command is \"sudo installer\", you need to enter your password.
-        sudo installer -store -pkg "./$latestPkg" -target /
-        rm -f "./$latestPkg"
+        sudo installer -store -pkg "/tmp/$latestPkg" -target /
+        rm -f "/tmp/$latestPkg"
     end
 end
